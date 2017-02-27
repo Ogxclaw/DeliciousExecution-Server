@@ -34,7 +34,6 @@ import com.rs.utils.NPCCombatDefinitionsL;
 import com.rs.utils.NPCDrops;
 import com.rs.utils.NPCSpawns;
 import com.rs.utils.ObjectSpawns;
-import com.rs.utils.PkRank;
 import com.rs.utils.SerializableFilesManager;
 import com.rs.utils.ShopsHandler;
 import com.rs.utils.Utils;
@@ -64,7 +63,7 @@ public final class Launcher {
 		Logger.log("Launcher", "Initing Data Files...");
 		DisplayNames.init();
 		IPBanL.init();
-		PkRank.init();
+		//PkRank.init();
 		DTRank.init();
 		MapArchiveKeys.init();
 		MapAreas.init();
@@ -168,7 +167,7 @@ public final class Launcher {
 		}
 		DisplayNames.save();
 		IPBanL.save();
-		PkRank.save();
+		//PkRank.save();
 		DTRank.save();
 	}
 

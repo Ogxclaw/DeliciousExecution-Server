@@ -11,7 +11,7 @@ public final class Settings {
 	 */
 	public static final String SERVER_NAME = "DeliciousExecution";
 	public static final int PORT_ID = 43594;
-	public static final String LASTEST_UPDATE = "<col=7E2217>Latest update: Hairdresser and cloths changing!";
+	public static final String LASTEST_UPDATE = "<col=7E2217>The server is up and running!";
 	public static final String CACHE_PATH = "data/cache/";
 	public static final int RECEIVE_DATA_LIMIT = 7500;
 	public static final int PACKET_SIZE_LIMIT = 7500;
@@ -50,7 +50,7 @@ public final class Settings {
 	public static final int START_PLAYER_HITPOINTS = 100;
 	public static final WorldTile START_PLAYER_LOCATION = new WorldTile(3221, 3218, 0);
 	public static final String START_CONTROLLER = "TutorialIsland"; // "NewHomeController";//
-	public static final WorldTile RESPAWN_PLAYER_LOCATION = new WorldTile(3094,3502, 0); //new WorldTile(2966, 3387, 0);// //
+	public static final WorldTile RESPAWN_PLAYER_LOCATION = new WorldTile(3221, 3218, 0); //new WorldTile(2966, 3387, 0);// //
 	public static final long MAX_PACKETS_DECODER_PING_DELAY = 30000; // 30seconds
 	public static final int XP_RATE = 15; 
 	public static final int DROP_RATE = 5;

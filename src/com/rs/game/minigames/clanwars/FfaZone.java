@@ -55,7 +55,7 @@ public final class FfaZone extends Controller {
 						Player killer = player.getMostDamageReceivedSourcePlayer();
 						if (killer != null) {
 							killer.removeDamage(player);
-							killer.increaseKillCount(player);
+							//killer.increaseKillCount(player);
 							player.sendItemsOnDeath(killer);
 						}
 						player.getEquipment().init();

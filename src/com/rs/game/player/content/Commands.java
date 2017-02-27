@@ -47,7 +47,6 @@ import com.rs.utils.Encrypt;
 import com.rs.utils.IPBanL;
 import com.rs.utils.Logger;
 import com.rs.utils.NPCSpawns;
-import com.rs.utils.PkRank;
 import com.rs.utils.SerializableFilesManager;
 import com.rs.utils.ShopsHandler;
 import com.rs.utils.Utils;
@@ -1411,7 +1410,7 @@ public final class Commands {
 
 			case "reloadfiles":
 				IPBanL.init();
-				PkRank.init();
+				//PkRank.init();
 				return true;
 
 			case "tele":
@@ -2365,9 +2364,9 @@ public final class Commands {
 				}
 				TicketSystem.requestTicket(player);
 				return true;
-			case "ranks":
+			/*case "ranks":
 				PkRank.showRanks(player);
-				return true;
+				return true;*/
 			case "score":
 			case "kdr":
 				double kill = player.getKillCount();

@@ -46,7 +46,7 @@ public class CorpBeastController extends Controller {
 					Player killer = player.getMostDamageReceivedSourcePlayer();
 					if (killer != null) {
 						killer.removeDamage(player);
-						killer.increaseKillCount(player);
+						//killer.increaseKillCount(player);
 					}
 					player.sendItemsOnDeath(player);
 					player.getEquipment().init();

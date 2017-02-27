@@ -63,7 +63,6 @@ import com.rs.net.encoders.WorldPacketsEncoder;
 import com.rs.utils.IsaacKeyPair;
 import com.rs.utils.Logger;
 import com.rs.utils.MachineInformation;
-import com.rs.utils.PkRank;
 import com.rs.utils.SerializableFilesManager;
 import com.rs.utils.Utils;
 
@@ -1770,26 +1769,26 @@ public class Player extends Entity {
 		}
 	}
 
-	public void increaseKillCount(Player killed) {
+	/*public void increaseKillCount(Player killed) {
 		killed.deathCount++;
-		PkRank.checkRank(killed);
+		//PkRank.checkRank(killed);
 		if (killed.getSession().getIP().equals(getSession().getIP()))
 			return;
 		killCount++;
 		getPackets().sendGameMessage(
 				"<col=ff0000>You have killed " + killed.getDisplayName() + ", you have now " + killCount + " kills.");
-		PkRank.checkRank(this);
+		//PkRank.checkRank(this);
 	}
 
 	public void increaseKillCountSafe(Player killed) {
-		PkRank.checkRank(killed);
+		//PkRank.checkRank(killed);
 		if (killed.getSession().getIP().equals(getSession().getIP()))
 			return;
 		killCount++;
 		getPackets().sendGameMessage(
 				"<col=ff0000>You have killed " + killed.getDisplayName() + ", you have now " + killCount + " kills.");
-		PkRank.checkRank(this);
-	}
+		//PkRank.checkRank(this);
+	}*/
 
 	public void sendRandomJail(Player p) {
 		p.resetWalkSteps();

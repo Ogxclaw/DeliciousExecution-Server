@@ -201,12 +201,12 @@ public class CastleWarsPlaying extends Controller {
 						CastleWars.dropFlag(player,
 								weaponId == 4037 ? CastleWars.SARADOMIN
 										: CastleWars.ZAMORAK);
-					} else {
+					}/* else {
 						Player killer = player
 								.getMostDamageReceivedSourcePlayer();
 						if (killer != null)
 							killer.increaseKillCount(player);
-					}
+					}*/
 
 					player.reset();
 					player.setNextWorldTile(new WorldTile(

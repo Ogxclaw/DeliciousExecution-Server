@@ -50,7 +50,6 @@ import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 import com.rs.io.InputStream;
 import com.rs.utils.Logger;
-import com.rs.utils.PkRank;
 import com.rs.utils.Utils;
 
 public final class ObjectHandler {
@@ -706,8 +705,8 @@ public final class ObjectHandler {
 					}
 				} else if (id == 9369) {
 					player.getControlerManager().startController("FightPits");
-				} else if (id == 54019 || id == 54020 || id == 55301)
-					PkRank.showRanks(player);
+				}/* else if (id == 54019 || id == 54020 || id == 55301)
+					PkRank.showRanks(player);*/
 				else if (id == 1817 && object.getX() == 2273
 						&& object.getY() == 4680) { // kbd lever
 					Magic.pushLeverTeleport(player, new WorldTile(3067, 10254,
@@ -777,9 +776,9 @@ public final class ObjectHandler {
 					player.useStairs(-1, new WorldTile(3374, 3093, 0), 0, 1);
 				} else if (id == 62674) { // dominion entrance
 					player.useStairs(-1, new WorldTile(3744, 6405, 0), 0, 1);
-				} else if(id == 3192) {
+				}/* else if(id == 3192) {
 					PkRank.showRanks(player);
-				} else if (id == 65349) {
+				}*/ else if (id == 65349) {
 					player.useStairs(-1, new WorldTile(3044, 10325, 0), 0, 1);
 				} else if (id == 32048 && object.getX() == 3043 &&  object.getY() == 10328) {
 					player.useStairs(-1, new WorldTile(3045, 3927, 0), 0, 1);

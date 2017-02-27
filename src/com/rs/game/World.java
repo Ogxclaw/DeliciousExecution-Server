@@ -55,7 +55,6 @@ import com.rs.game.player.controllers.Wilderness;
 import com.rs.utils.AntiFlood;
 import com.rs.utils.IPBanL;
 import com.rs.utils.Logger;
-import com.rs.utils.PkRank;
 import com.rs.utils.ShopsHandler;
 import com.rs.utils.Utils;
 
@@ -903,7 +902,7 @@ public final class World {
 						player.realFinish();
 					}
 					IPBanL.save();
-					PkRank.save();
+					//PkRank.save();
 					if (restart)
 						Launcher.restart();
 					else

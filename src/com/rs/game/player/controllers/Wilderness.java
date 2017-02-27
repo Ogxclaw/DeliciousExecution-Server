@@ -216,10 +216,10 @@ public class Wilderness extends Controller {
 					player.getPackets().sendGameMessage("Oh dear, you have died.");
 				} else if (loop == 3) {
 					Player killer = player.getMostDamageReceivedSourcePlayer();
-					if (killer != null) {
+					/*if (killer != null) {
 						killer.removeDamage(player);
 						killer.increaseKillCount(player);
-					}
+					}*/
 					player.sendItemsOnDeath(killer);
 					player.getEquipment().init();
 					player.getInventory().init();
