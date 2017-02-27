@@ -49,7 +49,6 @@ Temporary Items
 *.prefs
 *.classpath
 *.dat2
-*.project
 /data/
 /information/
 compiler.cmd
