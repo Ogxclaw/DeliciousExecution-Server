@@ -51,6 +51,7 @@ public final class Launcher {
 		Settings.DEBUG = Boolean.parseBoolean(args[1]);
 		long currentTime = Utils.currentTimeMillis();
 		if (Settings.HOSTED) {
+			// Joey has a tiny pecker =^)
 			// System.setErr(new PrintStream(new
 			// FileOutputStream("data/auto/err.txt")));
 			// System.setOut(new PrintStream(new
