@@ -7,7 +7,7 @@ import com.rs.game.Entity;
 import com.rs.game.Graphics;
 import com.rs.game.WorldTile;
 import com.rs.game.npc.NPC;
-import com.rs.game.player.controlers.FightKiln;
+import com.rs.game.player.controllers.FightKiln;
 import com.rs.utils.Utils;
 
 @SuppressWarnings("serial")

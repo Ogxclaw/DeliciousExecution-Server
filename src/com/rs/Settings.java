@@ -48,12 +48,12 @@ public final class Settings {
 	 * Player settings
 	 */
 	public static final int START_PLAYER_HITPOINTS = 100;
-	public static final WorldTile START_PLAYER_LOCATION = new WorldTile(3094,3502, 0);
-	public static final String START_CONTROLER = "StartTutorial"; // "NewHomeControler";//
+	public static final WorldTile START_PLAYER_LOCATION = new WorldTile(3221, 3218, 0);
+	public static final String START_CONTROLLER = "TutorialIsland"; // "NewHomeController";//
 	public static final WorldTile RESPAWN_PLAYER_LOCATION = new WorldTile(3094,3502, 0); //new WorldTile(2966, 3387, 0);// //
 	public static final long MAX_PACKETS_DECODER_PING_DELAY = 30000; // 30seconds
-	public static final int XP_RATE = 20; 
-	public static final int DROP_RATE = 10;
+	public static final int XP_RATE = 15; 
+	public static final int DROP_RATE = 5;
 	
 	/**
 	 * World settings

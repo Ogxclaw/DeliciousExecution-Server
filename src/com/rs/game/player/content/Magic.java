@@ -9,8 +9,8 @@ import com.rs.game.minigames.clanwars.FfaZone;
 import com.rs.game.minigames.clanwars.RequestController;
 import com.rs.game.player.Player;
 import com.rs.game.player.Skills;
-import com.rs.game.player.controlers.Kalaboss;
-import com.rs.game.player.controlers.Wilderness;
+import com.rs.game.player.controllers.Kalaboss;
+import com.rs.game.player.controllers.Wilderness;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 import com.rs.utils.Utils;
@@ -141,45 +141,45 @@ public class Magic {
 				if (!checkSpellRequirements(player, 61, delete, CHAOS_RUNE, 2, EARTH_RUNE, 1, SOUL_RUNE, 1)) {
 					return false;
 				}
-				int weaponId = player.getEquipment().getWeaponId();
-				if (weaponId != 13867 && weaponId != 13869 && weaponId != 13941 && weaponId != 13943 && !player.isExtremeDonator()) {
+				//int weaponId = player.getEquipment().getWeaponId();
+				/*if (weaponId != 13867 && weaponId != 13869 && weaponId != 13941 && weaponId != 13943 && !player.isExtremeDonator()) {
 					player.getPackets().sendGameMessage("You need a Zuriel's staff to cast this spell.");
 					player.getPackets().sendGameMessage("Extreme donators can cast Miasmic spells without Zuriel's staff.");
 					return false;
-				}
+				}*/
 				break;
 			case 38: //Miasmic burst.
 				if (!checkSpellRequirements(player, 73, delete, CHAOS_RUNE, 4, EARTH_RUNE, 2, SOUL_RUNE, 2)) {
 					return false;
 				}
-				weaponId = player.getEquipment().getWeaponId();
-				if (weaponId != 13867 && weaponId != 13869 && weaponId != 13941 && weaponId != 13943 && !player.isExtremeDonator()) {
+				//weaponId = player.getEquipment().getWeaponId();
+				/*if (weaponId != 13867 && weaponId != 13869 && weaponId != 13941 && weaponId != 13943 && !player.isExtremeDonator()) {
 					player.getPackets().sendGameMessage("You need a Zuriel's staff to cast this spell.");
 					player.getPackets().sendGameMessage("Extreme donators can cast Miasmic spells without Zuriel's staff.");
 					return false;
-				}
+				}*/
 				break;
 			case 37: //Miasmic blitz.
 				if (!checkSpellRequirements(player, 85, delete, BLOOD_RUNE, 2, EARTH_RUNE, 3, SOUL_RUNE, 3)) {
 					return false;
 				}
-				weaponId = player.getEquipment().getWeaponId();
-				if (weaponId != 13867 && weaponId != 13869 && weaponId != 13941 && weaponId != 13943 && !player.isExtremeDonator()) {
+				//weaponId = player.getEquipment().getWeaponId();
+				/*if (weaponId != 13867 && weaponId != 13869 && weaponId != 13941 && weaponId != 13943 && !player.isExtremeDonator()) {
 					player.getPackets().sendGameMessage("You need a Zuriel's staff to cast this spell.");
 					player.getPackets().sendGameMessage("Extreme donators can cast Miasmic spells without Zuriel's staff.");
 					return false;
-				}
+				}*/
 				break;
 			case 39: //Miasmic barrage.
 				if (!checkSpellRequirements(player, 97, delete, BLOOD_RUNE, 4, EARTH_RUNE, 4, SOUL_RUNE, 4)) {
 					return false;
 				}
-				weaponId = player.getEquipment().getWeaponId();
-				if (weaponId != 13867 && weaponId != 13869 && weaponId != 13941 && weaponId != 13943 && !player.isExtremeDonator()) {
+				//weaponId = player.getEquipment().getWeaponId();
+				/*if (weaponId != 13867 && weaponId != 13869 && weaponId != 13941 && weaponId != 13943 && !player.isExtremeDonator()) {
 					player.getPackets().sendGameMessage("You need a Zuriel's staff to cast this spell.");
 					player.getPackets().sendGameMessage("Extreme donators can cast Miasmic spells without Zuriel's staff.");
 					return false;
-				}
+				}*/
 				break;
 			default:
 				return false;
@@ -716,7 +716,7 @@ public class Magic {
 					}
 					player.setNextWorldTile(teleTile);
 					player.getControlerManager().magicTeleported(teleType);
-					if (player.getControlerManager().getControler() == null)
+					if (player.getControlerManager().getController() == null)
 						teleControlersCheck(player, teleTile);
 					if (xp != 0)
 						player.getSkills().addXp(Skills.MAGIC, xp);
@@ -779,7 +779,7 @@ public class Magic {
 					}
 					player.setNextWorldTile(teleTile);
 					player.getControlerManager().magicTeleported(ITEM_TELEPORT);
-					if (player.getControlerManager().getControler() == null)
+					if (player.getControlerManager().getController() == null)
 						teleControlersCheck(player, teleTile);
 					player.setNextFaceWorldTile(new WorldTile(teleTile.getX(),
 							teleTile.getY() - 1, teleTile.getPlane()));
@@ -799,13 +799,13 @@ public class Magic {
 
 	public static void teleControlersCheck(Player player, WorldTile teleTile) {
 		if (Kalaboss.isAtKalaboss(teleTile))
-			player.getControlerManager().startControler("Kalaboss");
+			player.getControlerManager().startController("Kalaboss");
 		else if (Wilderness.isAtWild(teleTile))
-			player.getControlerManager().startControler("Wilderness");
+			player.getControlerManager().startController("Wilderness");
 		else if (RequestController.inWarRequest(player))
-			player.getControlerManager().startControler("clan_wars_request");
+			player.getControlerManager().startController("clan_wars_request");
 		else if (FfaZone.inArea(player))
-			player.getControlerManager().startControler("clan_wars_ffa");
+			player.getControlerManager().startController("clan_wars_ffa");
 	}
 
 	private Magic() {

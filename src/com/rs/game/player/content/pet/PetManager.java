@@ -111,10 +111,10 @@ public final class PetManager implements Serializable {
 	private boolean hasRequirements(Pets pet) {
 		switch (pet) {
 		case TZREK_JAD:
-			if (!player.isExtremeDonator()) {
+			/*if (!player.isExtremeDonator()) {
 				player.getPackets().sendGameMessage("You need to be Extreme donator to use this pet.");
 				return false;
-			}
+			}*/
 			if (!player.isCompletedFightCaves()) {
 				player.getPackets().sendGameMessage("You need to complete at least one fight cave minigame to use this pet.");
 				return false;
@@ -133,11 +133,11 @@ public final class PetManager implements Serializable {
 		case VULTURE_4:
 		case VULTURE_5:
 		case CHAMELEON:
-			if (!player.isDonator()) {
+			/*if (!player.isDonator()) {
 				player.getPackets().sendGameMessage("You need to be donator to use this pet.");
 				return false;
 			}
-			return true;
+			return true;*/
 		case BABY_DRAGON_1:
 		case BABY_DRAGON_2:
 		case BABY_DRAGON_3:
@@ -145,11 +145,11 @@ public final class PetManager implements Serializable {
 		case GLOWING_EMBER:
 		case TWISTED_FIRESTARTER:
 		case WARMING_FLAME:
-			if (!player.isExtremeDonator()) {
+			/*if (!player.isExtremeDonator()) {
 				player.getPackets().sendGameMessage("You need to be Extreme donator to use this pet.");
 				return false;
 			}
-			return true;
+			return true;*/
 		case FERRET:
 		case GIANT_WOLPERTINGER:
 			return player.getRights() > 1;

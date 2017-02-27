@@ -1,22 +1,20 @@
 package com.rs.game.player.dialogues;
 
-import com.rs.game.player.controlers.TutorialIsland;
-
 public class MasterChef extends Dialogue {
 
 	int npcId;
-	TutorialIsland controler;
+	//TutorialIsland controler;
 
 	@Override
 	public void start() {
 		npcId = (Integer) parameters[0];
-		controler = (TutorialIsland) parameters[1];
+		/*controler = (TutorialIsland) parameters[1];
 		int s = controler.getStage();
 		if (s == 20) 
 			sendNPCDialogue(npcId, 9827, "Ah! Welcome, newcomer. I am the Master Chef, Lew. It is here I will teach you how to cook food truly fit for a king.");
-		else
+		else*/
 			end();
-	}
+	}	
 
 	@Override
 	public void run(int interfaceId, int componentId) {
@@ -35,7 +33,7 @@ public class MasterChef extends Dialogue {
 					"The Cooking Guide gives you a bucket of water", "and a pot of flour!" }, IS_ITEM, 1929, 1);
 			player.getInventory().addItem(1929, 1);
 			player.getInventory().addItem(1933, 1);
-			controler.updateProgress();
+			//controler.updateProgress();
 		} else {
 			end();
 		}

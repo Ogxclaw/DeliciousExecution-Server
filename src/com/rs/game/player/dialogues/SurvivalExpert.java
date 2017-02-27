@@ -1,17 +1,16 @@
 package com.rs.game.player.dialogues;
 
 import com.rs.cache.loaders.NPCDefinitions;
-import com.rs.game.player.controlers.TutorialIsland;
 
 public class SurvivalExpert extends Dialogue {
 
 	int npcId;
-	TutorialIsland controler;
+	//TutorialIsland controler;
 
 	@Override
 	public void start() {
 		npcId = (Integer) parameters[0];
-		controler = (TutorialIsland) parameters[1];
+		/*controler = (TutorialIsland) parameters[1];
 		int s = controler.getStage();
 		if (s == 4) {
 			sendEntityDialogue(
@@ -32,7 +31,7 @@ public class SurvivalExpert extends Dialogue {
 							"basic survival skill of all: making a fire." },
 					IS_NPC, npcId, 9827);
 			stage = 1;
-		} else
+		} else*/
 			end();
 	}
 
@@ -46,7 +45,7 @@ public class SurvivalExpert extends Dialogue {
 		} else if (stage == 0) {
 			player.getInventory().addItem(1351, 1);
 			player.getInventory().addItem(590, 1);
-			controler.updateProgress();
+			//controler.updateProgress();
 			end();
 		} else if (stage == 1) {
 			sendEntityDialogue(
@@ -63,7 +62,7 @@ public class SurvivalExpert extends Dialogue {
 			sendEntityDialogue(SEND_1_TEXT_CHAT, new String[] { "",
 					"The Survival Guide gives you a net!" }, IS_ITEM, 303, 1);
 			player.getInventory().addItem(303, 1);
-			controler.updateProgress();
+			//controler.updateProgress();
 		} else {
 			end();
 		}

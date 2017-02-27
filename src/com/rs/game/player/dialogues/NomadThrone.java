@@ -1,7 +1,7 @@
 package com.rs.game.player.dialogues;
 
 import com.rs.game.player.QuestManager.Quests;
-import com.rs.game.player.controlers.NomadsRequiem;
+import com.rs.game.player.controllers.NomadsRequiem;
 
 public class NomadThrone extends Dialogue {
 

@@ -1,17 +1,16 @@
 package com.rs.game.player.dialogues;
 
 import com.rs.cache.loaders.NPCDefinitions;
-import com.rs.game.player.controlers.StartTutorial;
 
 public class QuestGuide extends Dialogue {
 
 	int npcId;
-	StartTutorial controler;
+	//StartTutorial controler;
 
 	@Override
 	public void start() {
 		npcId = (Integer) parameters[0];
-		controler = (StartTutorial) parameters[1];
+		/*controler = (StartTutorial) parameters[1];
 		if (controler == null) {
 			sendEntityDialogue(
 					SEND_2_TEXT_CHAT,
@@ -38,7 +37,7 @@ public class QuestGuide extends Dialogue {
 						9827);
 				stage = 5;
 			}
-		}
+		}*/
 	}
 
 	@Override
@@ -59,9 +58,7 @@ public class QuestGuide extends Dialogue {
 					new String[] {
 							NPCDefinitions.getNPCDefinitions(npcId).name,
 							"This is a dangerous world where people kill themselves",
-							"to increase their honor. Those people get their",
-							"dangerous artefacts by spawning taking use of",
-							"commands as ::item ITEMID AMMOUNT." }, IS_NPC,
+							"to increase their honor." }, IS_NPC,
 					npcId, 9827);
 			player.getCutscenesManager().play("EdgeWilderness");
 		} else if (stage == 1) {
@@ -74,7 +71,7 @@ public class QuestGuide extends Dialogue {
 							"Why don't you try too? Click on the zaros altar there and",
 							"try switching your prayers." }, IS_NPC, npcId,
 					9827);
-			controler.updateProgress();
+			//controler.updateProgress();
 		} else if (stage == 5) {
 			stage = 6;
 			sendEntityDialogue(SEND_2_TEXT_CHAT,

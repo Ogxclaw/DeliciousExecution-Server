@@ -49,3 +49,13 @@ Temporary Items
 *.prefs
 .project
 *.classpath
+*.dat2
+*.idx0
+data/cache/main_file_cache.idx1
+*.idx10
+data/cache/main_file_cache.idx11
+*.idx12
+/data/
+/information/
+*.bat
+compiler.cmd

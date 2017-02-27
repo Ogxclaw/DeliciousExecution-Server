@@ -5,7 +5,7 @@ import com.rs.game.Entity;
 import com.rs.game.Graphics;
 import com.rs.game.WorldTile;
 import com.rs.game.npc.combat.NPCCombatDefinitions;
-import com.rs.game.player.controlers.FightCaves;
+import com.rs.game.player.controllers.FightCaves;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 

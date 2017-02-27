@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 import com.rs.game.Animation;
-import com.rs.game.Graphics;
 import com.rs.game.World;
 import com.rs.game.item.Item;
 import com.rs.utils.Logger;
@@ -81,7 +80,7 @@ public class AuraManager implements Serializable {
 				// TODO message cooldown
 				return;
 			}
-			if (!player.isExtremeDonator() && isWingedAura(item.getId())) {
+			/*if (!player.isExtremeDonator() && isWingedAura(item.getId())) {
 				player.getPackets().sendGameMessage("You need to be extreme donator to use this feature.");
 				return;
 			}
@@ -89,11 +88,11 @@ public class AuraManager implements Serializable {
 			if (!player.isDonator() && !player.isExtremeDonator() && tier > 1) {
 				player.getPackets().sendGameMessage("You need to be a donator to use this feature.");
 				return;
-			}
+			}*/
 			activation = Utils.currentTimeMillis() + getActivationTime(item.getId()) * 1000;
 			cooldowns.put(item.getId(), activation + getCooldown(item.getId()) * 1000);
 			player.setNextAnimation(new Animation(2231));
-			player.setNextGraphics(new Graphics(getActiveGraphic(tier)));
+			//player.setNextGraphics(new Graphics(getActiveGraphic(tier)));
 			player.getAppearence().generateAppearenceData();
 		}
 	}

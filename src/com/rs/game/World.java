@@ -51,7 +51,7 @@ import com.rs.game.player.Skills;
 import com.rs.game.player.actions.BoxAction.HunterNPC;
 import com.rs.game.player.content.ItemConstants;
 import com.rs.game.player.content.LivingRockCavern;
-import com.rs.game.player.controlers.Wilderness;
+import com.rs.game.player.controllers.Wilderness;
 import com.rs.utils.AntiFlood;
 import com.rs.utils.IPBanL;
 import com.rs.utils.Logger;
@@ -490,12 +490,12 @@ public final class World {
 	}
 
 	private static void checkControlersAtMove(Player player) {
-		if (!(player.getControlerManager().getControler() instanceof RequestController) && RequestController.inWarRequest(player))
-			player.getControlerManager().startControler("clan_wars_request");
+		if (!(player.getControlerManager().getController() instanceof RequestController) && RequestController.inWarRequest(player))
+			player.getControlerManager().startController("clan_wars_request");
 		else if (DuelControler.isAtDuelArena(player)) 
-			player.getControlerManager().startControler("DuelControler");
+			player.getControlerManager().startController("DuelControler");
 		else if (FfaZone.inArea(player)) 
-			player.getControlerManager().startControler("clan_wars_ffa");
+			player.getControlerManager().startController("clan_wars_ffa");
 	}
 
 	/*

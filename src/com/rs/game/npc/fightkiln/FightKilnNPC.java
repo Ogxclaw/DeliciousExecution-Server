@@ -11,7 +11,7 @@ import com.rs.game.WorldTile;
 import com.rs.game.npc.NPC;
 import com.rs.game.npc.combat.NPCCombatDefinitions;
 import com.rs.game.player.Player;
-import com.rs.game.player.controlers.FightKiln;
+import com.rs.game.player.controllers.FightKiln;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 

@@ -21,8 +21,8 @@ import com.rs.game.npc.NPC;
 import com.rs.game.player.Inventory;
 import com.rs.game.player.actions.Summoning.Pouches;
 import com.rs.game.player.content.Foods.Food;
+import com.rs.game.player.controllers.Controller;
 import com.rs.game.player.content.Pots;
-import com.rs.game.player.controlers.Controler;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 
@@ -31,7 +31,7 @@ import com.rs.game.tasks.WorldTasksManager;
  * @author Apache ah64
  * @author Emperor
  */
-public final class RefugeOfFear extends Controler {
+public final class RefugeOfFear extends Controller {
 
 	/**
 	 * The random instance, used for randomizing values.
@@ -77,11 +77,11 @@ public final class RefugeOfFear extends Controler {
 	@Override
 	public void start() {
 		int itemid = hasFamiliarPouch();
-		if (!player.isExtremeDonator()) {
+		/*if (!player.isExtremeDonator()) {
 			player.getDialogueManager().startDialogue("SimpleMessage", "You have to be an extreme donator to enter this minigame.");
 			player.getControlerManager().removeControlerWithoutCheck();
 			return;
-		} else if (hasFollower()) {
+		} else */if (hasFollower()) {
 			player.getDialogueManager().startDialogue("SimpleMessage", "You cannot take a familiar into Refuge of Fear.");
 			player.getControlerManager().removeControlerWithoutCheck();
 			return;

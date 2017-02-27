@@ -1,17 +1,16 @@
 package com.rs.game.player.dialogues;
 
 import com.rs.cache.loaders.NPCDefinitions;
-import com.rs.game.player.controlers.TutorialIsland;
 
 public class RuneScapeGuide extends Dialogue {
 
 	int npcId;
-	TutorialIsland controler;
+	//TutorialIsland controler;
 
 	@Override
 	public void start() {
 		npcId = (Integer) parameters[0];
-		controler = (TutorialIsland) parameters[1];
+		/*controler = (TutorialIsland) parameters[1];
 		int s = controler.getStage();
 		if (s == 0) {
 			sendEntityDialogue(
@@ -28,7 +27,7 @@ public class RuneScapeGuide extends Dialogue {
 							"I'm glad you're making progress!" }, IS_NPC,
 					npcId, 9827);
 			stage = 5;
-		} else
+		} else*/
 			end();
 	}
 
@@ -81,7 +80,7 @@ public class RuneScapeGuide extends Dialogue {
 							"You will notice a flashing icon of a spanner; please click",
 							"on this to continue the tutorial." }, IS_NPC,
 					npcId, 9827);
-			controler.updateProgress();
+			//controler.updateProgress();
 		} else if (stage == 5) {
 			stage = 6;
 			sendEntityDialogue(
@@ -92,7 +91,7 @@ public class RuneScapeGuide extends Dialogue {
 							"there and speak to your first instructor!" },
 					IS_NPC, npcId, 9827);
 		} else if (stage == 6) {
-			controler.updateProgress();
+			//controler.updateProgress();
 			end();
 		} else
 			end();

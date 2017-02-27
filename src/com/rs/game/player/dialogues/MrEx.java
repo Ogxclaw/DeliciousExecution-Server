@@ -6,8 +6,8 @@ import com.rs.game.WorldTile;
 import com.rs.game.minigames.CastleWars;
 import com.rs.game.player.Skills;
 import com.rs.game.player.content.Magic;
-import com.rs.game.player.controlers.FightCaves;
-import com.rs.game.player.controlers.FightKiln;
+import com.rs.game.player.controllers.FightCaves;
+import com.rs.game.player.controllers.FightKiln;
  
 //TODO Change name of MrEx
 public class MrEx extends Dialogue {
@@ -59,7 +59,7 @@ public class MrEx extends Dialogue {
 			if (componentId == OPTION_1) {
 				Magic.sendNormalTeleportSpell(player, 0, 0, new WorldTile(3365,
 						3275, 0));
-				player.getControlerManager().startControler("DuelControler");
+				player.getControlerManager().startController("DuelControler");
 			} else if (componentId == OPTION_2)
 				Magic.sendNormalTeleportSpell(player, 0, 0, new WorldTile(2470,
 						3436, 0));
@@ -82,14 +82,14 @@ public class MrEx extends Dialogue {
 			} else if (componentId == OPTION_2) {
 				Magic.sendNormalTeleportSpell(player, 0, 0, new WorldTile(3240,
 						3611, 0));
-				player.getControlerManager().startControler("Wilderness");
+				player.getControlerManager().startController("Wilderness");
 			} else if (componentId == OPTION_3)
 				Magic.sendNormalTeleportSpell(player, 0, 0, new WorldTile(4608,
 						5061, 0));
 			else if (componentId == OPTION_4) {
 				Magic.sendNormalTeleportSpell(player, 0, 0, new WorldTile(2984,
 						3596, 0));
-				player.getControlerManager().startControler("Wilderness");
+				player.getControlerManager().startController("Wilderness");
 			} else if (componentId == OPTION_5) {
 				stage = 5;
 				sendOptionsDialogue("Where would you like to go?",
@@ -100,7 +100,7 @@ public class MrEx extends Dialogue {
 			if (componentId == OPTION_1) {
 				Magic.sendNormalTeleportSpell(player, 0, 0, new WorldTile(3360,
 						3658, 0));
-				player.getControlerManager().startControler("Wilderness");
+				player.getControlerManager().startController("Wilderness");
 			} else if (componentId == OPTION_2)
 				Magic.sendNormalTeleportSpell(player, 0, 0, new WorldTile(2709,
 						9464, 0));
@@ -145,7 +145,7 @@ public class MrEx extends Dialogue {
 					player.getPackets().sendGameMessage("You need a summoning level of 60 to go through this portal.");
 					return;
 				}
-				player.getControlerManager().startControler("QueenBlackDragonControler");
+				player.getControlerManager().startController("QueenBlackDragonControler");
 			}
 			/*else if (componentId == 2)
 				teleportPlayer(2838, 5297, 2);
@@ -165,7 +165,7 @@ public class MrEx extends Dialogue {
 	private void teleportPlayer(int x, int y, int z) {
 		player.setNextWorldTile(new WorldTile(x, y, z));
 		player.stopAll();
-		player.getControlerManager().startControler("GodWars");
+		player.getControlerManager().startController("GodWars");
 	}
 
 	@Override

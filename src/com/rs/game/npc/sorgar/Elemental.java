@@ -11,7 +11,7 @@ import com.rs.game.WorldTile;
 import com.rs.game.npc.NPC;
 import com.rs.game.player.Player;
 import com.rs.game.player.content.FadingScreen;
-import com.rs.game.player.controlers.SorceressGarden;
+import com.rs.game.player.controllers.SorceressGarden;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 

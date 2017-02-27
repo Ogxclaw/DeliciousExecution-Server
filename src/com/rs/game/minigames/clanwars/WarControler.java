@@ -9,7 +9,7 @@ import com.rs.game.player.Player;
 import com.rs.game.player.actions.PlayerCombat;
 import com.rs.game.player.content.Foods.Food;
 import com.rs.game.player.content.Pots.Pot;
-import com.rs.game.player.controlers.Controler;
+import com.rs.game.player.controllers.Controller;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 
@@ -18,7 +18,7 @@ import com.rs.game.tasks.WorldTasksManager;
  * @author Emperor
  *
  */
-public final class WarControler extends Controler {
+public final class WarControler extends Controller {
 
 	/**
 	 * The clan wars instance.

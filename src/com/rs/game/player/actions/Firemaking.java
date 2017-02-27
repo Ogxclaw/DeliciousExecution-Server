@@ -136,7 +136,7 @@ public class Firemaking extends Action {
 				1) // cliped
 				|| World.getRegion(player.getRegionId()).getSpawnedObject(
 						player) != null
-						|| player.getControlerManager().getControler() instanceof DuelArena || player.getControlerManager().getControler() instanceof DuelControler) { // contains
+						|| player.getControlerManager().getController() instanceof DuelArena || player.getControlerManager().getController() instanceof DuelControler) { // contains
 			// object
 			player.getPackets().sendGameMessage("You can't light a fire here.");
 			return false;

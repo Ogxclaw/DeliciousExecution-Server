@@ -23,7 +23,7 @@ import com.rs.game.npc.familiar.Familiar;
 import com.rs.game.player.Player;
 import com.rs.game.player.actions.Slayer;
 import com.rs.game.player.actions.Slayer.SlayerTask;
-import com.rs.game.player.controlers.Wilderness;
+import com.rs.game.player.controllers.Wilderness;
 import com.rs.game.tasks.WorldTask;
 import com.rs.game.tasks.WorldTasksManager;
 import com.rs.utils.Logger;

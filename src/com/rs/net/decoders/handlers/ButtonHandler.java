@@ -978,7 +978,7 @@ public class ButtonHandler {
 			if (componentId == 15) {
 				player.stopAll();
 				player.setNextWorldTile(new WorldTile(2974, 4384, player.getPlane()));
-				player.getControlerManager().startControler(
+				player.getControlerManager().startController(
 						"CorpBeastControler");
 			} else if (componentId == 16)
 				player.closeInterfaces();
