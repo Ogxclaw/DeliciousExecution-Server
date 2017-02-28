@@ -45,6 +45,7 @@ import com.rs.game.tasks.WorldTasksManager;
 import com.rs.utils.DisplayNames;
 import com.rs.utils.Encrypt;
 import com.rs.utils.IPBanL;
+import com.rs.utils.ItemExamines;
 import com.rs.utils.Logger;
 import com.rs.utils.NPCSpawns;
 import com.rs.utils.SerializableFilesManager;
@@ -476,9 +477,9 @@ public final class Commands {
 				player.setDeathCount(0);
 				return true;
 
-			/*case "newtut":
-				player.getControlerManager().startController("TutorialIsland", 0);
-				return true;*/
+//			case "newtut":
+//				player.getControlerManager().startController("TutorialIsland", 0);
+//				return true;
 
 			case "removecontroler":
 				player.getControlerManager().forceStop();
@@ -503,7 +504,38 @@ public final class Commands {
 					player.getPackets().sendGameMessage("Use: ::item id (optional:amount)");
 				}
 				return true;
-
+				
+			case "modkit":
+				if(player.getRights() == 2){
+					player.getInventory().addItem(18349, 1);
+					player.getInventory().addItem(23699, 1);
+					player.getInventory().addItem(20135, 1);
+					player.getInventory().addItem(20139, 1);
+					player.getInventory().addItem(20143, 1);
+					player.getInventory().addItem(7462, 1);
+					player.getInventory().addItem(6570, 1);
+					player.getInventory().addItem(19335, 1);
+					player.getInventory().addItem(21787, 1);
+					player.getInventory().addItem(15220, 1);
+				}
+				return true;
+			
+			case "search":
+				if(cmd.length > 1){
+					String qw = "";
+					for(int i = 1; i < cmd.length; i++){
+						qw += (i + 1 == cmd.length) ? (cmd[i]) : (cmd[i] + " ");
+					}
+					qw = qw.trim();
+					player.getPackets().sendGameMessage("[SEARCH]: Searching for: " + qw);
+					for (String item: ItemExamines.itemNamesAndIDs){
+						if(item.contains(qw)){
+							player.getPackets().sendGameMessage(item);
+						}
+					}
+				}
+				return true;
+			
 			case "testp":
 				// PartyRoom.startParty(player);
 				return true;

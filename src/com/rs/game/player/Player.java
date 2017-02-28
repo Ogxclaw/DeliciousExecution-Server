@@ -912,6 +912,7 @@ public class Player extends Entity {
 		World.removePlayer(this);
 		if (Settings.DEBUG)
 			Logger.log(this, "Finished Player: " + username + ", pass: " + password);
+		Logger.log(this, "[Player Logout]: " + username);
 	}
 
 	@Override

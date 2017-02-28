@@ -11,7 +11,9 @@ import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.channels.FileChannel.MapMode;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 import com.rs.game.item.Item;
 
@@ -20,7 +22,8 @@ public class ItemExamines {
 	private final static HashMap<Integer, String> itemExamines = new HashMap<Integer, String>();
 	private final static String PACKED_PATH = "data/items/packedExamines.e";
 	private final static String UNPACKED_PATH = "data/items/unpackedExamines.txt";
-
+	
+	
 	public static final void init() {
 		if (new File(PACKED_PATH).exists())
 			loadPackedItemExamines();
