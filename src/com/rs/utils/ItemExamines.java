@@ -23,8 +23,19 @@ public class ItemExamines {
 	private final static String PACKED_PATH = "data/items/packedExamines.e";
 	private final static String UNPACKED_PATH = "data/items/unpackedExamines.txt";
 	
+	public static ArrayList<String> itemNamesAndIDs = new ArrayList<String>();
 	
 	public static final void init() {
+		try{
+			Scanner sc = new Scanner(new File("information/itemList.txt"));
+			while(sc.hasNextLine()){
+				itemNamesAndIDs.add(sc.nextLine().toLowerCase());
+			}
+			sc.close();
+			Logger.log("Launcher", "Completed Loading ItemList/IDs. Found '" + itemNamesAndIDs.size() + "' items.");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		if (new File(PACKED_PATH).exists())
 			loadPackedItemExamines();
 		else
